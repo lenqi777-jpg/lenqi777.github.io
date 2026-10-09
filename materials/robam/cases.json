@@ -1,0 +1,147 @@
+{
+  "project": "老板电器厨电文化元素研究",
+  "attribution": "本人参与博物馆调研，重点整理史前至夏商周材料及初步设计启发，交付PPT。视频记录团队大型展板，不将整个展板归为个人设计成果。",
+  "presentationScope": "下列内容以用户提交的研究PPT为来源，表达资料整理和初步设计启发，不宣称完成现代厨电方案或验证文化解释。",
+  "cases": [
+    {
+      "id": "swirl-bottle",
+      "name": "漩涡纹尖底瓶",
+      "periodLabel": "仰韶文化",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "image": "swirl-bottle.png",
+      "sourceImage": "slide-04-image-04.png",
+      "sourceMedia": "ppt/media/image11.png",
+      "width": 553,
+      "height": 954,
+      "headline": "纹样与功能对象的关联",
+      "summary": "报告从漩涡纹、双耳与尖底等特征出发，整理器物的造型与功能关系，并提出从厨电的功能对象寻找视觉元素的初步思路。",
+      "details": [
+        {
+          "label": "纹样",
+          "text": "报告把重复、循环的漩涡纹与水的意象关联。",
+          "originalExcerpt": "将自然界中动态的漩涡，通过几何语言进行具象化的表达，同时运用重复、循环的方式，使该器物具有灵动的美感。",
+          "page": 4
+        },
+        {
+          "label": "器型",
+          "text": "梳理细口长颈、尖底与双耳等造型特征。",
+          "originalExcerpt": "细口长颈，斜肩饱腹，瘦长体尖底，腹部有双耳，用以穿绳。",
+          "page": 4
+        },
+        {
+          "label": "色彩",
+          "text": "记录红褐色陶衣与黑彩的组合。",
+          "originalExcerpt": "红褐色陶衣，外绘黑彩",
+          "page": 4
+        },
+        {
+          "label": "可能用途",
+          "text": "报告分别整理水器说与酒器说，保留不同的功能解释。",
+          "originalExcerpt": "水器说：",
+          "additionalExcerpt": "酒器说：",
+          "page": 5
+        },
+        {
+          "label": "设计启发",
+          "text": "在报告中提出：厨电的视觉表达可从气体、火等功能对象中寻找关联，而不只复制纹样。",
+          "originalExcerpt": "沿用该器物的纹样思路，即通过纹样体现该器物的功能对象",
+          "page": 4
+        }
+      ],
+      "boundary": "PPT同时列有水器说与酒器说。页面保留为报告中的不同解释，不将任一历史用途写成已确认事实。"
+    },
+    {
+      "id": "black-pottery",
+      "name": "双鼻陶壶",
+      "periodLabel": "良渚文化",
+      "sourcePages": [
+        7
+      ],
+      "image": "black-pottery.png",
+      "sourceImage": "slide-07-image-04.png",
+      "sourceMedia": "ppt/media/image17.png",
+      "width": 1742,
+      "height": 1742,
+      "headline": "简约纹样与黑陶质感",
+      "summary": "报告将简洁纹样、圆润器型与黑陶色彩放在一起分析，归纳以细腻表面处理和简约形态形成视觉风格的初步启发。",
+      "details": [
+        {
+          "label": "纹样",
+          "text": "观察基础线条的简洁、规整排列。",
+          "originalExcerpt": "良渚文化黑陶纹样的典型特征为简洁、规整，主要以基础的线的排布作为装饰",
+          "page": 7
+        },
+        {
+          "label": "器型",
+          "text": "整理长颈、扁腹、圈足和口沿外侧环钮的结构特征。",
+          "originalExcerpt": "长颈，扁腹，圈足，口沿外侧附一对鼻形环钮，是良渚文化的典型器物。",
+          "page": 7
+        },
+        {
+          "label": "色彩",
+          "text": "记录泥质灰胎黑皮陶的乌黑、光亮质感。",
+          "originalExcerpt": "泥质灰胎黑皮陶，乌黑光亮",
+          "page": 7
+        },
+        {
+          "label": "可能用途",
+          "text": "PPT提出盛放酒醴或净水的可能用途。此处保留为报告解释。",
+          "originalExcerpt": "该陶壶功能可能为盛放酒醴或净水。",
+          "page": 7
+        },
+        {
+          "label": "设计启发",
+          "text": "报告提出以细腻的表面处理搭配简约形态，为现代厨电的美学研究提供参考。",
+          "originalExcerpt": "以细腻、精美的表面处理搭配上极简的形态",
+          "page": 7
+        }
+      ],
+      "boundary": "“高级感”和“中式极简”属于报告中的设计解读，不表现成已做用户验证或企业采用的方案。"
+    },
+    {
+      "id": "steam-vessel",
+      "name": "作册般甗",
+      "periodLabel": "商代器物资料",
+      "sourcePages": [
+        13
+      ],
+      "image": "steam-vessel.png",
+      "sourceImage": "slide-13-image-05.png",
+      "sourceMedia": "ppt/media/image33.png",
+      "width": 751,
+      "height": 1111,
+      "headline": "器物结构与使用方式的拆解",
+      "summary": "报告按上部盛食、下部受热的结构整理蒸食器的使用方式，将外观资料与功能说明结合，并对照现代蒸煮器具理解结构。",
+      "details": [
+        {
+          "label": "结构",
+          "text": "分开理解上部的甑与下部的鬲。",
+          "originalExcerpt": "上为盛食的“甑”，下为受热的“鬲”或“釜”，有联体与分体两种形制。",
+          "page": 13
+        },
+        {
+          "label": "功能",
+          "text": "报告重点记录箅孔与蒸汽流通的关系。",
+          "originalExcerpt": "底部有箅孔用于蒸汽流通",
+          "page": 13
+        },
+        {
+          "label": "纹样",
+          "text": "梳理牛首纹和兽面纹等装饰元素，与结构观察分开记录。",
+          "originalExcerpt": "牛首纹",
+          "page": 13
+        },
+        {
+          "label": "功能对照",
+          "text": "以现代蒸锅的蒸屉、煮锅作结构类比，帮助理解器物各部分的使用方式。",
+          "originalExcerpt": "作册般甗上部的甑相当于现代蒸锅的蒸屉，用于盛放需要蒸煮的食物",
+          "page": 13
+        }
+      ],
+      "boundary": "这是调研资料与功能类比，未形成或实现现代厨电设计方案。原图含中国国家博物馆水印，保留水印，不宣称该照片为本人拍摄。"
+    }
+  ]
+}
