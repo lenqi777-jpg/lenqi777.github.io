@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef0f3">
+  <title>项目展示 · 徐郑豪</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./cases.css">
+  <script defer src="./cases.js"></script>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <header class="case-header">
+    <a class="case-brand" href="./">徐郑豪<span>PORTFOLIO</span></a>
+    <a class="back-home" href="./#projects-title">返回作品集</a>
+  </header>
+  <main class="case-main">
+    <nav class="case-nav" aria-label="选择项目">
+      <a href="#workflows" data-case="workflows" aria-current="page">01 · AI 绘画</a>
+      <a href="#prototype" data-case="prototype">02 · AI 研究工具</a>
+      <a href="#research" data-case="research">03 · 老板电器</a>
+    </nav>
+
+    <section class="case-section" id="workflows" aria-labelledby="workflow-title">
+      <header class="case-heading">
+        <p class="case-eyebrow">AI WORKFLOWS <span>2024.09 — 2024.11</span></p>
+        <h1 id="workflow-title">AI 绘画设计项目</h1>
+        <p>搭建三类 ComfyUI 工作流，探索模型、控制条件与生成效果之间的关系。</p>
+      </header>
+      <div class="workflow-tabs" role="group" aria-label="选择工作流">
+        <button type="button" data-workflow="0" aria-pressed="true">换脸</button>
+        <button type="button" data-workflow="1" aria-pressed="false">粘土转绘</button>
+        <button type="button" data-workflow="2" aria-pressed="false">工业设计草图渲染</button>
+      </div>
+      <div class="workflow-caption">
+        <p id="workflow-summary">正在读取工作流……</p>
+        <span id="graph-counts"></span>
+      </div>
+      <div class="workflow-workspace">
+        <div class="graph-panel">
+          <div class="graph-toolbar">
+            <span>完整节点图</span>
+            <div class="graph-tools" aria-label="节点图视图控制">
+              <button type="button" id="zoom-out" aria-label="缩小节点图">−</button>
+              <output id="zoom-label" aria-label="当前缩放比例">100%</output>
+              <button type="button" id="zoom-in" aria-label="放大节点图">＋</button>
+              <button type="button" id="fit-graph">适合画布</button>
+            </div>
+          </div>
+          <div id="graph-viewport" class="graph-viewport" tabindex="0" aria-label="工作流节点画布，可拖动平移，使用缩放按钮放大">
+            <svg id="workflow-svg" xmlns="http://www.w3.org/2000/svg" aria-label="ComfyUI 工作流节点与连接" role="group"></svg>
+            <p class="graph-state" id="graph-state" role="status">正在打开节点图……</p>
+          </div>
+          <p class="graph-hint">拖动画布平移 · 点击节点查看详情 · 连线颜色对应数据类型</p>
+        </div>
+        <aside class="node-inspector" aria-labelledby="node-title">
+          <label for="node-selector">选择节点</label>
+          <select id="node-selector"><option value="">查看工作流概览</option></select>
+          <button type="button" id="focus-node" disabled>放大当前节点</button>
+          <p class="node-kicker" id="node-kicker">WORKFLOW</p>
+          <h2 id="node-title">工作流概览</h2>
+          <div id="node-details"><p>节点类型、参数与输入输出会在这里显示。</p></div>
+        </aside>
+      </div>
+      <div class="case-footnotes">
+        <p>节点和连接来自本人保存的三份 JSON 原文件。为便于阅读重新排布节点，连接关系保持原样；图像生成需在 ComfyUI 中运行。</p>
+        
+      </div>
+      <section class="work-context" aria-label="个人实践范围">
+        <div><span>我的工作</span><p>选择模型、连接节点、配置控制条件，并调整提示词与生成参数。</p></div>
+        <div><span>展示重点</span><p>查看输入图像如何经过不同条件约束，进入采样、解码与输出流程。</p></div>
+      </section>
+    </section>
+
+    <section class="case-section" id="prototype" aria-labelledby="prototype-title" hidden>
+      <header class="case-heading">
+        <p class="case-eyebrow">INTERACTIVE PROTOTYPE <span>2024 — 至今</span></p>
+        <h1 id="prototype-title">AI 辅助情感研究与设计策略工具</h1>
+        <p>将情感事件、原因解释与设计方向连接起来，在每一步保留设计师的判断和原始依据。</p>
+      </header>
+      <div class="prototype-intro">
+        <div>
+          <p class="small-label">体验一个示例</p>
+          <h2>从“安心”的生活资料，探索空气炸锅的设计方向。</h2>
+          <p>可以编辑事件、核查依据、选择设计措施，再查看形成的策略方案。示例资料与候选结果均为虚构演示，当前没有真实 AI 调用。</p>
+        </div>
+        <a class="case-primary" href="./demos/emotion/index.html#project/demo/task" target="_blank" rel="noopener">独立窗口体验</a>
+      </div>
+      <div class="prototype-path" role="group" aria-label="选择要体验的研究阶段">
+        <button type="button" data-stage="task" aria-pressed="true"><span>01</span>任务界定</button>
+        <button type="button" data-stage="events" aria-pressed="false"><span>02</span>情感事件</button>
+        <button type="button" data-stage="causes" aria-pressed="false"><span>03</span>原因解释</button>
+        <button type="button" data-stage="patterns" aria-pressed="false"><span>04</span>评价模式</button>
+        <button type="button" data-stage="directions" aria-pressed="false"><span>05</span>设计转译</button>
+        <button type="button" data-stage="strategies" aria-pressed="false"><span>06</span>策略比较</button>
+      </div>
+      <p class="stage-guidance" id="stage-guidance">先看任务中的目标用户、目标产品和希望形成的体验。</p>
+      <div class="prototype-frame-wrap">
+        <div class="frame-toolbar"><span>可点击原型 · 2.11</span><span>演示数据</span></div>
+        <iframe id="prototype-frame" title="AI 辅助情感研究与设计策略工具可点击原型" data-src="./demos/emotion/index.html#project/demo/task"></iframe>
+      </div>
+      <section class="work-context" aria-label="原型设计思考">
+        <div><span>依据可回查</span><p>将分析与原始资料关联，允许回到事件和上下文核查判断。</p></div>
+        <div><span>人工确认与修改</span><p>保留编辑、确认、修改记录与下游复查提示，支持设计师校正推演。</p></div>
+        <div><span>我的工作</span><p>研究流程与信息结构设计；借助 AI 生成代码，通过需求描述与反馈迭代网页原型。</p></div>
+      </section>
+    </section>
+
+    <section class="case-section" id="research" aria-labelledby="research-title" hidden>
+      <header class="case-heading">
+        <p class="case-eyebrow">CULTURAL RESEARCH <span>2025.04 — 2025.10</span></p>
+        <h1 id="research-title">老板电器厨具文化属性研究</h1>
+        <p>通过博物馆考察与资料整理，梳理古代饮食器具的纹样、器型、色彩与使用方式。</p>
+      </header>
+      <div class="research-opening">
+        <div class="research-overview">
+          <p class="small-label">从器物资料到初步设计启发</p>
+          <h2>让调研资料可以被比较、理解和继续使用。</h2>
+          <p>个人重点整理史前至夏商周材料，以 PPT 记录器物特征，并归纳初步设计启发。团队将不同历史时期的资料整理成大型展板。</p>
+          <dl class="research-facts">
+            <div><dt>个人参与</dt><dd>考察、资料整理、特征拆解与初步启发</dd></div>
+            <div><dt>个人交付</dt><dd>史前至夏商周资料 PPT</dd></div>
+            <div><dt>团队呈现</dt><dd>大型文化调研展板</dd></div>
+          </dl>
+        </div>
+        <figure class="research-video">
+          <video id="research-video" controls playsinline preload="none" poster="./materials/robam/exhibition-cover.jpg" aria-label="团队大型文化调研展板现场视频">
+            <source src="./materials/robam/exhibition.mp4" type="video/mp4">
+            您的浏览器不支持播放视频。
+          </video>
+          <figcaption>团队调研展板现场记录 · 约 18 秒</figcaption>
+          <p class="video-feedback" role="status" hidden>视频暂时无法读取。图文资料仍可查看。</p>
+        </figure>
+      </div>
+      <section class="artifact-gallery" aria-labelledby="gallery-title">
+        <header class="gallery-heading"><div><p class="small-label">RESEARCH NOTES</p><h2 id="gallery-title">三份器物资料摘选</h2></div><p>图片与文字摘自本人整理的研究 PPT。</p></header>
+        <div class="artifact-tabs" role="group" aria-label="选择器物资料">
+          <button type="button" data-artifact="0" aria-pressed="true">漩涡纹尖底瓶</button>
+          <button type="button" data-artifact="1" aria-pressed="false">双鼻陶壶</button>
+          <button type="button" data-artifact="2" aria-pressed="false">作册般甗</button>
+        </div>
+        <div class="artifact-display">
+          <figure class="artifact-image-wrap">
+            <button id="enlarge-artifact" type="button" aria-label="放大查看器物图片"><img id="artifact-image" alt="" loading="lazy"></button>
+            <figcaption id="artifact-source"></figcaption>
+          </figure>
+          <div class="artifact-notes">
+            <p id="artifact-period" class="small-label"></p>
+            <h3 id="artifact-name"></h3>
+            <p id="artifact-summary"></p>
+            <dl id="artifact-details"></dl>
+            <details class="source-excerpts"><summary>查看 PPT 原文摘录</summary><div id="artifact-excerpts"></div></details>
+            <p id="artifact-boundary" class="source-note"></p>
+          </div>
+        </div>
+      </section>
+      <p class="case-footnote">以上呈现资料整理和初步设计思考。</p>
+    </section>
+    <p id="case-error" class="case-error" role="alert" hidden></p>
+  </main>
+  <dialog id="image-dialog" aria-label="器物图片大图">
+    <button type="button" id="close-image">关闭大图</button>
+    <img id="dialog-image" alt="">
+    <p id="dialog-caption"></p>
+  </dialog>
+</body>
+</html>

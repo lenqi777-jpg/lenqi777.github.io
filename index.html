@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <meta name="theme-color" content="#eef0f3">
+    <meta name="description" content="徐郑豪的作品集。浙江工业大学工业设计硕士。">
+    <title>徐郑豪 · 作品集</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23eef0f3'/%3E%3Ccircle cx='10' cy='11' r='3' fill='%234b7fc9'/%3E%3Ccircle cx='22' cy='11' r='2' fill='%234b7fc9'/%3E%3Ccircle cx='10' cy='23' r='2' fill='%234b7fc9'/%3E%3Ccircle cx='22' cy='23' r='1' fill='%234b7fc9'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./dot-field.js"></script>
+    <script defer src="./greeting-motion.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+    <main aria-label="作品集">
+      <section class="welcome" aria-label="作品集首页">
+      <canvas class="dot-field" aria-hidden="true"></canvas>
+      <header class="masthead intro-entry">
+        <span class="owner-name">徐郑豪</span>
+        <span class="portfolio-label" lang="en">PORTFOLIO</span>
+      </header>
+      <h1 class="greeting" aria-label="您好，欢迎您来！" data-playing="false">
+        <span class="greeting-line" aria-hidden="true"><span class="greeting-phrase">您好<span class="punctuation">，</span></span></span>
+        <span class="greeting-line" aria-hidden="true"><span class="greeting-phrase">欢迎您来<span class="punctuation">！</span></span></span>
+      </h1>
+      <section class="personal-info" aria-label="个人信息与联系方式">
+        <div class="identity intro-entry">
+          
+          <p>浙江工业大学 · 工业设计硕士<br>关注生成式 AI 与用户体验</p>
+        </div>
+        <address class="contact-info intro-entry">
+          <span class="contact-item"><span class="contact-label">邮箱</span><span>330514308@qq.com</span></span>
+          <span class="contact-item"><span class="contact-label">电话</span><span>152 5771 7583</span></span>
+        </address>
+      </section>
+      <div class="scroll-cue intro-entry" aria-hidden="true"><span>向下，看看我的项目</span><span class="scroll-arrow">↓</span></div>
+      </section>
+      <section class="projects" aria-labelledby="projects-title">
+        <div class="projects-inner">
+          <header class="projects-heading scroll-reveal">
+            <p class="section-label" lang="en">SELECTED WORK</p>
+            <h2 id="projects-title">项目与实践</h2>
+            <p class="projects-intro">AI 图像工作流、交互原型与设计研究。</p>
+          </header>
+          <div class="project-list">
+            <article class="project-entry scroll-reveal" aria-labelledby="project-title-1">
+              <span class="project-number" aria-hidden="true">01</span>
+              <div class="project-content">
+                <div class="project-meta"><span>AI 图像工作流实践</span><span>2024.09 — 2024.11</span></div>
+                <h3 id="project-title-1">AI 绘画设计项目</h3>
+                <p class="project-description">搭建换脸、粘土风格转绘和工业设计草图渲染三类 ComfyUI 工作流，通过模型与参数调整迭代视觉效果。个人制作的旅行打卡模板发布于 DreamFace。</p>
+                <ul class="project-tags" aria-label="项目关键词"><li>ComfyUI</li><li>图像工作流</li><li>视觉迭代</li></ul>
+                <a class="project-case-link" href="./cases.html#workflows">查看工作流案例<span>三份可缩放节点图</span></a>
+              </div>
+            </article>
+            <article class="project-entry scroll-reveal" aria-labelledby="project-title-2">
+              <span class="project-number" aria-hidden="true">02</span>
+              <div class="project-content">
+                <div class="project-meta"><span>产品流程与交互原型</span><span>2024 年 — 至今</span></div>
+                <h3 id="project-title-2">AI 辅助情感研究与设计策略工具</h3>
+                <p class="project-description">面向情感化设计前期研究，设计从任务界定到策略比较的六阶段流程，并制作可编辑的网页交互原型。通过原文回查、人工确认与修改留痕支持结果核查。目前使用演示数据，尚未接入模型。</p>
+                <ul class="project-tags" aria-label="项目关键词"><li>产品流程</li><li>交互原型</li><li>证据核查</li></ul>
+                <a class="project-case-link" href="./cases.html#prototype">体验交互原型<span>六阶段研究流程</span></a>
+              </div>
+            </article>
+            <article class="project-entry scroll-reveal" aria-labelledby="project-title-3">
+              <span class="project-number" aria-hidden="true">03</span>
+              <div class="project-content">
+                <div class="project-meta"><span>文化资料调研</span><span>2025.04 — 2025.10</span></div>
+                <h3 id="project-title-3">老板电器厨具文化属性研究</h3>
+                <p class="project-description">参与古代饮食器具的文化资料调研，重点整理史前至夏商周材料，拆解纹样、器型、色彩与使用方式，并归纳初步设计启发。个人交付资料 PPT，团队以大型展板呈现调研成果。</p>
+                <ul class="project-tags" aria-label="项目关键词"><li>文化调研</li><li>实地考察</li><li>资料整理</li></ul>
+                <a class="project-case-link" href="./cases.html#research">查看调研案例<span>展板视频与器物资料</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
