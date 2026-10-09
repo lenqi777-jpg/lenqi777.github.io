@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="面向设计师的情感体验研究可点击原型。所有示例资料及候选结果均为演示内容。">
+  <title>情感体验设计系统 · 设计师体验版</title>
+  <link rel="stylesheet" href="app.css">
+  <script defer src="data.js"></script>
+  
+  <script defer src="appraisal-core.js"></script>
+  <script defer src="pattern-core.js"></script>
+  <script defer src="translation-core.js"></script>
+  <script defer src="measure-core.js"></script>
+  <script defer src="export-core.js"></script>
+  <script defer src="export-view.js"></script>
+  <script defer src="workflow-navigation.js"></script>
+  <script defer src="project-store.js"></script>
+  
+  <script defer src="motion.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="workspace">
+      <aside class="chapter-sidebar" aria-label="项目与研究阶段导航">
+        <div class="chapter-mark"><span id="chapter-number">00</span><span id="chapter-caption">PROJECTS</span></div>
+        <button id="back-to-hub" type="button" data-action="back-to-hub" hidden><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m7 4-4 4 4 4M3 8h10"/></svg>返回项目</button>
+        <p id="sidebar-label" class="sidebar-label">项目空间 / WORKSPACE</p>
+        <nav id="home-nav" aria-label="项目空间">
+          <button type="button" data-hub-view="all" class="active" aria-current="page"><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="11" y="2" width="5" height="5" rx="1"/><rect x="2" y="11" width="5" height="5" rx="1"/><rect x="11" y="11" width="5" height="5" rx="1"/></svg><span>我的项目</span></button>
+          <button type="button" data-hub-view="recent"><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="6.5"/><path d="M9 5v4l3 2"/></svg><span>最近打开</span></button>
+          <button type="button" data-hub-view="archived"><svg viewBox="0 0 18 18" aria-hidden="true" focusable="false"><rect x="2" y="2" width="14" height="3.5" rx=".5"/><path d="M3.5 5.5V16h11V5.5M7 9h4"/></svg><span>已归档</span></button>
+        </nav>
+        <nav id="stage-nav" aria-label="研究阶段" hidden>
+          <button type="button" data-stage="task" class="active" aria-current="step"><span class="nav-number">01</span><span>任务界定</span></button>
+          <button type="button" data-stage="events" disabled aria-label="情感事件，未开放" title="完成当前阶段并点击下一步后开放"><span class="nav-number">02</span><span>情感事件</span><span class="stage-lock" aria-hidden="true"><svg viewBox="0 0 16 18" focusable="false" fill="none"><rect x="2.25" y="7.5" width="11.5" height="8.5" rx="1.5"/><path d="M4.5 7.5V5a3.5 3.5 0 0 1 7 0v2.5"/><path d="M8 11v2"/></svg></span></button>
+          <button type="button" data-stage="causes" disabled aria-label="原因解释，未开放" title="完成前序阶段并点击下一步后开放"><span class="nav-number">03</span><span>原因解释</span><span class="stage-lock" aria-hidden="true"><svg viewBox="0 0 16 18" focusable="false" fill="none"><rect x="2.25" y="7.5" width="11.5" height="8.5" rx="1.5"/><path d="M4.5 7.5V5a3.5 3.5 0 0 1 7 0v2.5"/><path d="M8 11v2"/></svg></span></button>
+          <button type="button" data-stage="patterns" disabled aria-label="评价模式，未开放" title="完成前序阶段并点击下一步后开放"><span class="nav-number">04</span><span>评价模式</span><span class="stage-lock" aria-hidden="true"><svg viewBox="0 0 16 18" focusable="false" fill="none"><rect x="2.25" y="7.5" width="11.5" height="8.5" rx="1.5"/><path d="M4.5 7.5V5a3.5 3.5 0 0 1 7 0v2.5"/><path d="M8 11v2"/></svg></span></button>
+          <button type="button" data-stage="directions" disabled aria-label="设计转译，未开放" title="完成前序阶段并点击下一步后开放"><span class="nav-number">05</span><span>设计转译</span><span class="stage-lock" aria-hidden="true"><svg viewBox="0 0 16 18" focusable="false" fill="none"><rect x="2.25" y="7.5" width="11.5" height="8.5" rx="1.5"/><path d="M4.5 7.5V5a3.5 3.5 0 0 1 7 0v2.5"/><path d="M8 11v2"/></svg></span></button>
+          <button type="button" data-stage="strategies" disabled aria-label="策略比较，未开放" title="完成前序阶段并点击下一步后开放"><span class="nav-number">06</span><span>策略比较</span><span class="stage-lock" aria-hidden="true"><svg viewBox="0 0 16 18" focusable="false" fill="none"><rect x="2.25" y="7.5" width="11.5" height="8.5" rx="1.5"/><path d="M4.5 7.5V5a3.5 3.5 0 0 1 7 0v2.5"/><path d="M8 11v2"/></svg></span></button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-tools" aria-label="项目工具">
+            <button type="button" data-action="history">修订记录</button>
+            <button type="button" data-action="help">体验说明</button>
+            <p class="small experience-label">设计师体验版 · 2.11</p>
+          </div>
+          <div class="sidebar-notes"><p id="mode-note" class="small" hidden></p><p id="save-status" class="small" role="status">仅保存在当前浏览器</p></div>
+          <p id="project-name" class="small project-context">尚未打开项目</p>
+        </div>
+      </aside>
+      <div class="research-workspace">
+        <section class="page-heading" aria-labelledby="page-title">
+          <p id="page-eyebrow" class="eyebrow">项目总控台 / PROJECTS</p>
+          <h1 id="page-title">AI辅助<br>情感体验设计系统原型。</h1>
+          <p id="page-note">从项目开始，整理生活资料，逐步形成情感体验设计判断。</p>
+        </section>
+        <main id="content" class="scroll-region" aria-label="当前研究内容" tabindex="0">
+          <div class="paper-wrap"><div class="tab-label">RESEARCH FILE</div><article class="paper empty"><p>正在打开项目空间……</p><noscript><p>请启用 JavaScript，以使用此可点击原型。</p></noscript></article></div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <button id="return-to-origin" type="button" data-action="back-reference" aria-label="返回之前的位置" title="返回之前的位置" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M9 6 3 12l6 6M4 12h10a6 6 0 0 0 6-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div id="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+  <dialog id="dialog" aria-label="项目对话框"><div id="dialog-content"></div></dialog>
+</body>
+</html>
